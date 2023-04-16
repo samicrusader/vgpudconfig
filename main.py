@@ -104,7 +104,7 @@ for pci_id, device in physical_gpus.items():
         if vgpu_device['parent']['device'] == device_id and vgpu_device['parent']['subsystem'] == subsystem_id:
             xml += f'    <supportedVgpu vgpuId="{vgpu_device["id"]}">\n'
             xml += f'      <maxVgpus>{int(host_fb_size / vgpu_device["settings"]["profileSize"])}</maxVgpus>\n'
-            xml += '       <digest type="signature">signaturemoment</digest>\n'
+            xml += '       <digest type="signature">38fc196fcdd9f48ada0737791291d1fa93ae96fd0f517cef43b715bbbb50c37231308f3fecff1faf2fa0c16a0136e1813b15ab1c66b53d9cd370686d525f0c803bca564f21a7efe0c05147f02a3f59e35004a1627afd5f8bc433ab07d71006ace26c75cf3a32e5cc3e1859057b0c01bdb3e87003b2e8b9474c0733cb6d6ff9e4</digest>\n'
             xml += '    </supportedVgpu>\n'
     xml += '  </pgpu>\n'
 xml += '</vgpuconfig>\n'
